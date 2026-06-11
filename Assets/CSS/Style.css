@@ -100,17 +100,31 @@ img {
 }
 
 .header__inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
   align-items: center;
-  gap: 2.5rem;
 }
 
 .header__photo {
-  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__identity {
-  flex: 1;
+  padding-left: 2.5rem;
+}
+
+.header {
+  padding: 2rem 0;
+}
+
+.header__identity {
+  text-align: center;
+}
+
+.header__contacts-list {
+  justify-content: center;
 }
 
 /* CONTACTS */
