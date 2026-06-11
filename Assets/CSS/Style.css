@@ -59,7 +59,7 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--color-text);
-  background-color: var(--color-border); /* anciennement --color-border, inchangé */
+  background-color: var(--color-border);
   line-height: 1.5;
 }
 
@@ -216,4 +216,214 @@ img {
 
 .footer__social-link {
   display: inline-flex;
+}
+
+/* ISSUE #6 — CSS : IDENTITÉ GRAPHIQUE */
+
+/* HEADER */
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 2rem 2.5rem;
+}
+
+.header__photo a {
+  display: block;
+}
+
+.header__photo-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--color-white);
+  object-fit: cover;
+}
+
+.header__name {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.header__title {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.header__contacts {
+  font-style: normal;
+}
+
+.header__contact-item {
+  font-size: 0.95rem;
+}
+
+.header__contact-item a:hover {
+  text-decoration: underline;
+}
+
+.header__icon {
+  width: 1em;
+  height: 1em;
+  fill: var(--color-white);
+  flex-shrink: 0;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: var(--color-sidebar-bg);
+  padding: 2rem 1.5rem;
+}
+
+.sidebar__section {
+  margin-bottom: 2rem;
+}
+
+.sidebar__title {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.star {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.star--filled {
+  color: var(--color-primary);
+}
+
+.star--empty {
+  color: var(--color-border);
+}
+
+.languages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.language-item {
+  font-size: 0.9rem;
+}
+
+.language-name {
+  font-weight: 700;
+}
+
+.language-level {
+  color: var(--color-text);
+  opacity: 0.6;
+}
+
+.qualities-list {
+  font-size: 0.9rem;
+}
+
+.qualities-list li::before {
+  content: '■';
+  color: var(--color-primary);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+/* CORPS DU CV */
+.content {
+  padding: 2rem 2rem 2rem 2.5rem;
+}
+
+.content__section {
+  margin-bottom: 2rem;
+}
+
+.content__title {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.profile-text {
+  text-align: justify;
+  text-indent: 2em;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.timeline-item {
+  padding: 0.6rem 0.75rem;
+}
+
+.timeline-item__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.timeline-item__place {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.timeline-item__date {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.5rem 2rem;
+}
+
+.footer__social-icon {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+.footer__update {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-white);
+}
+
+/* Accessibilité : focus visible */
+a:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.sidebar a:focus-visible,
+.content a:focus-visible {
+  outline-color: var(--color-primary);
 }
