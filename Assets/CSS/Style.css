@@ -427,3 +427,36 @@ a:focus-visible {
 .content a:focus-visible {
   outline-color: var(--color-primary);
 }
+
+/* ISSUE #7 — CSS : LES EFFETS */
+
+/* Effet 1 */
+.timeline-item {
+  border-left: 3px solid transparent;
+  transition: background-color 0.2s ease, border-left-color 0.2s ease;
+  cursor: default;
+}
+
+.timeline-item:hover {
+  background-color: var(--color-sidebar-bg); /* anciennement --color-hover-bg → remplacé par --color-sidebar-bg */
+  border-left-color: var(--color-primary);
+}
+
+/* Effet 2 */
+.header__photo-img {
+  cursor: zoom-in;
+  transition: opacity 0.2s ease;
+}
+
+.header__photo-img:hover {
+  opacity: 0.9;
+}
+
+/* Effet n°3 */
+.footer__social-link {
+  transition: opacity 0.2s ease;
+}
+
+.footer__social-link:hover {
+  opacity: 0.6;
+}
